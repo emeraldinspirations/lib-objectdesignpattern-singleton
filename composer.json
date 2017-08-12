@@ -1,0 +1,20 @@
+{
+    "name": "emeraldinspirations/lib-objectdesignpattern-singleton",
+    "description": "Functions that are common in singleton objects",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Matthew \"Juniper\" Barlett",
+            "email": "emeraldinspirations@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+    },
+    "autoload": {
+        "psr-4": {
+            "emeraldinspirations\\library\\objectDesignPattern\\singleton\\": "src/"
+        }
+    }
+}
