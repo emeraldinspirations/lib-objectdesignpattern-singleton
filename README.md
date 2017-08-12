@@ -22,51 +22,10 @@ composer require emeraldinspirations/lib-objectdesignpattern-singleton
 
 use emeraldinspirations\library\objectDesignPattern\singleton\SingletonTrait;
 
-class ExampleImmutableObject
+class ExampleSingletonObject
 {
-    use ImmutableTrait;
-
-    protected $Property;
-
-    /**
-     * Return value of Property
-     *
-     * @return \stdclass
-     */
-    public function getProperty() : \stdclass
-    {
-        return $this->Property;
-    }
-
-    /**
-     * Create new instance with new Property value
-     *
-     * @param \stdclass $Property New value
-     *
-     * @return self
-     */
-    public function withProperty(\stdclass $Property) : self {
-        return self::withGeneric(__FUNCTION__, $Property);
-    }
-
-    /**
-     * Clone all specified properties are cloned as necessary
-     *
-     * @return void
-     */
-    public function __clone()
-    {
-
-        // Create an array of references to properties to clone
-        $PropertiesToByCloned = [
-            &$this->Property,
-        //  ^ - IMPORTANT: Be sure to pass by reference
-        ];
-
-        ImmutableTrait::cloneArrayRecursively($PropertiesToByCloned);
-
-    }
-
+    use SingletonTrait;
+    
 }
 ```
 
